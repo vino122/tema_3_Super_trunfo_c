@@ -11,8 +11,7 @@ int main(){
     float pib1, pib2;
     float densidade_pop1, densidade_pop2;
     float pib_percapita1, pib_percapita2;
-    float super_poder1, super_poder2;
-    int resultado1, resultado2;
+   
 
     //carta numero 1
     printf("Digite as informacões da carta número 1\n");
@@ -42,7 +41,6 @@ int main(){
     //calculo da densidade populacional e do pib per capita
     densidade_pop1 = populacao1 / area_km1;
     pib_percapita1 = pib1 / populacao1;
-    super_poder1 = (float) (populacao1+pontos_turisticos1+area_km1+pib1+densidade_pop1+pib_percapita1)/6;
 
     printf("--------------------------------\n\n");
 
@@ -74,6 +72,18 @@ int main(){
     //calculo da densidade populacional e do pib per capita
     densidade_pop2 = populacao2 / area_km2;
     pib_percapita2 = pib2 / populacao2;
+
+    if (pontos_turisticos1 > pontos_turisticos2){
+        printf("Vencedor: Carta número 1:\n%s é a vencedora!\n", nome_cidade1);
+    } 
+    else{
+        printf("Vencedor: Carta numero 2:\n%s é a vencedora!\n", nome_cidade2);
+    }
+
+    
+
+
+
 
     return 0;
 }
