@@ -55,7 +55,7 @@ int main(){
 
     //Digitar apenas sem espaço
     printf("Nome da cidade: \n");
-    scanf("%s", nome_cidade2);
+    scanf(" %s", nome_cidade2);
 
     printf("Quantidade da população: \n");
     scanf("%d", &populacao2);
@@ -73,11 +73,15 @@ int main(){
     densidade_pop2 = populacao2 / area_km2;
     pib_percapita2 = pib2 / populacao2;
 
+    
+    //comparação entre as cartas
     if (pontos_turisticos1 > pontos_turisticos2){
         printf("Vencedor: Carta número 1:\n%s é a vencedora!\n", nome_cidade1);
     } 
-    else{
+    else if (pontos_turisticos2 > pontos_turisticos1){
         printf("Vencedor: Carta numero 2:\n%s é a vencedora!\n", nome_cidade2);
+    } else {
+        printf("Empate! Nenhuma carta vence!\n");
     }
 
     
