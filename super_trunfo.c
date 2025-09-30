@@ -11,6 +11,7 @@ int main(){
     float pib1, pib2;
     float densidade_pop1, densidade_pop2;
     float pib_percapita1, pib_percapita2;
+    int compararj1, compararj2;
    
 
     //carta numero 1
@@ -73,10 +74,37 @@ int main(){
     densidade_pop2 = populacao2 / area_km2;
     pib_percapita2 = pib2 / populacao2;
 
-    
-    //comparação entre as cartas
+    printf("--------------------------------\n\n");
+
+    //escolha da categoria para comparar as cartas
+    printf("Escolha a categoria para comparar as cartas:\n");
+    printf("1 - Pontos Turísticos\n");
+    scanf("%d", &compararj1);
+
+    switch (compararj1){
+        case 1:
+            printf("Carta escolhida: Pontos Turísticos\n");
+            break;
+        
+       
+        default:
+            printf("Opção inválida!\n");
+    }
+        printf("Escolha a categoria para comparar as cartas:\n");
+        printf("1 - Pontos Turísticos\n");
+        scanf("%d", &compararj2);
+
+    switch (compararj2){
+        case 1:
+        printf("Carta escolhida: Pontos Turísticos\n");
+            break;
+        
+        default:
+            printf("Opção inválida!\n");}
+
     if (pontos_turisticos1 > pontos_turisticos2){
         printf("Vencedor: Carta número 1:\n%s é a vencedora!\n", nome_cidade1);
+        
     } 
     else if (pontos_turisticos2 > pontos_turisticos1){
         printf("Vencedor: Carta numero 2:\n%s é a vencedora!\n", nome_cidade2);
@@ -84,8 +112,7 @@ int main(){
         printf("Empate! Nenhuma carta vence!\n");
     }
 
-    
-
+    printf("Placar: %d x %d", pontos_turisticos1, pontos_turisticos2); //aparece o placar
 
 
 
