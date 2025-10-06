@@ -12,7 +12,8 @@ int main(){
     float densidade_pop1, densidade_pop2;
     float pib_percapita1, pib_percapita2;
     int compararj1, compararj2;
-   
+    int resultado1, resultado2, resultado3, resultado4;
+ 
 
     //carta numero 1
     printf("Digite as informacões da carta número 1\n");
@@ -106,9 +107,14 @@ int main(){
         default:
             printf("Opção inválida!\n");
     }
-
-
-        printf("Escolha a categoria para comparar as cartas:\n");
+    
+    if (compararj1 == compararj2){
+        printf("Empate na escolha da categoria! Escolha novamente.\n");
+        
+    } else{
+        printf("Jogador 2, é a sua vez de escolher a categoria.\n");
+    
+       printf("Escolha a categoria para comparar as cartas:\n");
         printf("1 - Pontos Turísticos\n");
         printf("2 - População\n");
         printf("3 - Área em KM²\n");
@@ -118,55 +124,54 @@ int main(){
     switch (compararj2){
         case 1:
         printf("Carta escolhida: Pontos Turísticos\n");
+        resultado1 = pontos_turisticos1 > pontos_turisticos2 ? 1 : 0; 
 
-        if (pontos_turisticos1 > pontos_turisticos2){
-                printf("Vencedor: Carta número 1:\n%s é a vencedora!\n", nome_cidade1);
-            }else if (pontos_turisticos2 > pontos_turisticos1){
-                printf("Vencedor: Carta numero 2:\n%s é a vencedora!\n", nome_cidade2);
-            } else {
-                printf("Empate! Nenhuma carta vence!\n");}
+       
             break;
 
         case 2:
             printf("Carta escolhida: População\n");
+            resultado2 = populacao1 > populacao2 ? 1 : 0;
 
-        if (populacao1 > populacao2){
-                printf("Vencedor: Carta número 1:\n%s é a vencedora!\n", nome_cidade1);
-            }else if (populacao2 > populacao1){
-                printf("Vencedor: Carta numero 2:\n%s é a vencedora!\n", nome_cidade2);
-            } else {
-                printf("Empate! Nenhuma carta vence!\n");}
+        
             break;
 
         case 3:
             printf("Carta escolhida: Área em KM²\n");
+            resultado3 = area_km1 > area_km2 ? 1 : 0;
 
-        if (area_km1 > area_km2){
-                printf("Vencedor: Carta número 1:\n%s é a vencedora!\n", nome_cidade1);
-            }else if (area_km2 > area_km1){
-                printf("Vencedor: Carta numero 2:\n%s é a vencedora!\n", nome_cidade2);
-            } else {
-                printf("Empate! Nenhuma carta vence!\n");}    
+        
             break;
         case 4:
             printf("Carta escolhida: PIB\n");
+            resultado4 = pib1 > pib2 ? 1 : 0;
 
-        if (pib1 > pib2){
-                printf("Vencedor: Carta número 1:\n%s é a vencedora!\n", nome_cidade1);
-            }else if (pib2 > pib1){
-                printf("Vencedor: Carta numero 2:\n%s é a vencedora!\n", nome_cidade2);
-            } else {
-                printf("Empate! Nenhuma carta vence!\n");}
-            break;
-        
+       
         default:
-            printf("Opção inválida!\n");}
+            printf("Opção inválida!\n");}}
         
-      
-    printf("Placar: Jogador 1: %d x Jogador 2: %d", compararj1, compararj2);
-    
+        if (compararj1 == compararj2){
+            printf("Empate na escolha da categoria! Escolha novamente.\n");
+            return 0;
+        }
 
-    
+        if (resultado1 == 1){
+            printf("Jogador 1 venceu!\n");
+        } else if (resultado2 == 1){
+            printf("Jogador 1 venceu!\n");
+        } else if (resultado3 == 1){
+            printf("Jogador 1 venceu!\n");
+        } else if (resultado4 == 1){
+            printf("Jogador 1 venceu!\n");
+        } else {
+            printf("Jogador 2 venceu!\n");
+        }
+
+
+
+
+
+   
 
 
     return 0;
