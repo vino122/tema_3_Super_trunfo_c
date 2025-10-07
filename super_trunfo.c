@@ -181,8 +181,8 @@ int main(){
 
         printf("--------------------------------\n\n");
     
-    soma1 = pontos_turisticos1 + populacao1 + area_km1 + pib1;
-    soma2 = pontos_turisticos2 + populacao2 + area_km2 + pib2;
+    soma1 = (float)pontos_turisticos1 + populacao1 + area_km1 + pib1;
+    soma2 = (float)pontos_turisticos2 + populacao2 + area_km2 + pib2;
 
     if (soma1 > soma2){
         printf("Jogador 1 é o grande vencedor com a soma total de %d pontos!\n", soma1);
